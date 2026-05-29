@@ -102,6 +102,37 @@
     max-width: 960px;
   }
 
+  .hero-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+
+  .hero-text {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-photo {
+    flex-shrink: 0;
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards 0.5s;
+  }
+
+  .hero-photo img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 48px rgba(63,185,80,0.18), 0 0 0 6px rgba(63,185,80,0.06);
+    display: block;
+  }
+
   .hero-tag {
     font-family: var(--mono);
     font-size: 12px;
@@ -494,6 +525,8 @@
     .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
     .projects-grid { grid-template-columns: 1fr; }
     .edu-grid { grid-template-columns: 1fr; }
+    .hero-top { flex-direction: column-reverse; align-items: flex-start; gap: 2rem; }
+    .hero-photo img { width: 120px; height: 120px; }
   }
 </style>
 </head>
@@ -511,18 +544,25 @@
 
 <!-- HERO -->
 <section id="hero">
-  <p class="hero-tag">// DevOps & Cloud Engineer</p>
-  <h1 class="hero-name">Rahulkumar<br><em>Choudhary</em></h1>
-  <p class="hero-role">Building infrastructure that doesn't break at 3am.</p>
-  <p class="hero-summary">
-    DevSecOps engineer with 5+ years designing cloud-native infrastructure, CI/CD pipelines, and 
-    Kubernetes-based microservices at scale. Specializing in AWS, Azure, Terraform, and GitOps — 
-    turning manual toil into automated systems that just work.
-  </p>
-  <div class="hero-links">
-    <a href="mailto:rahulkumarmanoharchoudhary@gmail.com" class="btn primary">say hello</a>
-    <a href="https://linkedin.com/in/rahulkumar-choudhary" target="_blank" class="btn">LinkedIn ↗</a>
-    <a href="https://github.com/rahulkumar-choudhary" target="_blank" class="btn">GitHub ↗</a>
+  <div class="hero-top">
+    <div class="hero-text">
+      <p class="hero-tag">// DevOps & Cloud Engineer</p>
+      <h1 class="hero-name">Rahulkumar<br><em>Choudhary</em></h1>
+      <p class="hero-role">Building infrastructure that doesn't break at 3am.</p>
+      <p class="hero-summary">
+        DevSecOps engineer with 5+ years designing cloud-native infrastructure, CI/CD pipelines, and
+        Kubernetes-based microservices at scale. Specializing in AWS, Azure, Terraform, and GitOps —
+        turning manual toil into automated systems that just work.
+      </p>
+      <div class="hero-links">
+        <a href="mailto:rahulkumarmanoharchoudhary@gmail.com" class="btn primary">say hello</a>
+        <a href="https://linkedin.com/in/rahulkumar-choudhary" target="_blank" class="btn">LinkedIn ↗</a>
+        <a href="https://github.com/rahulkumar-choudhary" target="_blank" class="btn">GitHub ↗</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="src/rahul.jpg" alt="Rahulkumar Choudhary">
+    </div>
   </div>
   <div class="stat-row">
     <div class="stat-item">
